@@ -5,25 +5,12 @@ import WelcomeScreen from "./screens/WelcomeScreen";
 import Card from "./components/Card";
 import ListItem from "./components/ListItem";
 import ViewImageScreen from "./screens/ViewImageScreen";
-import ListingDetailsScreen from "./components/ListDetailsScreen";
+import ListingDetailsScreen from "./screens/ListDetailsScreen";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import MessagesScreen from "./screens/MessagesScreen";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      {/* <Card
-        title="Red jacket for sale"
-        subtitle="$100"
-        image={require("../app/assets/jacket.jpg")}
-      /> */}
-      {/* <ListItem
-        title="Red jacket for sale"
-        subtitle="$100"
-        image={require("../app/assets/jacket.jpg")}
-      /> */}
-      {/* <ViewImageScreen /> */}
-      <ListingDetailsScreen />
-    </View>
-  );
+  return <MessagesScreen />;
 }
 const styles = StyleSheet.create({
   container: {
