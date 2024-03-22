@@ -19,12 +19,13 @@ function ListItem({
   IconComponent,
   onPress,
   renderRightActions,
+  style,
 }) {
   return (
     <GestureHandlerRootView>
       <Swipeable renderRightActions={renderRightActions}>
         <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
-          <View style={styles.container}>
+          <View style={[styles.container, style]}>
             {IconComponent}
             {image && <Image style={styles.image} source={image} />}
             <View style={styles.detailsContainer}>

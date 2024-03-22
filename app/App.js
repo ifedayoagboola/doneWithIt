@@ -8,13 +8,10 @@ import ViewImageScreen from "./screens/ViewImageScreen";
 import ListingDetailsScreen from "./screens/ListDetailsScreen";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import MessagesScreen from "./screens/MessagesScreen";
+import MyAccountScreen from "./screens/AccountScreen";
+import AccountScreen from "./screens/AccountScreen";
+import ListingsScreen from "./screens/ListingsScreen";
 
 export default function App() {
-  return <MessagesScreen />;
+  return <ListingsScreen />;
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#f8f4f4",
-  },
-});
