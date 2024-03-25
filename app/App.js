@@ -11,7 +11,13 @@ import MessagesScreen from "./screens/MessagesScreen";
 import MyAccountScreen from "./screens/AccountScreen";
 import AccountScreen from "./screens/AccountScreen";
 import ListingsScreen from "./screens/ListingsScreen";
+import AppTextInput from "./components/AppTextInput";
+import Screen from "./components/Screen";
 
 export default function App() {
-  return <ListingsScreen />;
+  return (
+    <Screen>
+      <AppTextInput placeholder="fchjdrtygug" />
+    </Screen>
+  );
 }
