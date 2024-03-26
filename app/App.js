@@ -13,11 +13,13 @@ import AccountScreen from "./screens/AccountScreen";
 import ListingsScreen from "./screens/ListingsScreen";
 import AppTextInput from "./components/AppTextInput";
 import Screen from "./components/Screen";
+import AppPicker from "./components/AppPicker";
 
 export default function App() {
   return (
     <Screen>
       <AppTextInput placeholder="fchjdrtygug" />
+      <AppPicker placeholder="ghftyubj" />
     </Screen>
   );
 }
