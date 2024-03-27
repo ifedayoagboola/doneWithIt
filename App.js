@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import Screen from "./components/Screen";
-import AppPicker from "./components/AppPicker";
-import AppTextInput from "./components/AppTextInput";
+import Screen from "./app/components/Screen";
+import AppPicker from "./app/components/AppPicker";
+import AppTextInput from "./app/components/AppTextInput";
 
 const categories = [
   { label: "Furniture", value: 1 },
