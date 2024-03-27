@@ -2,22 +2,24 @@ import React, { useState } from "react";
 import { FlatList, StyleSheet, View } from "react-native";
 
 import Screen from "../components/Screen";
-import ListItem from "../components/ListItem";
+import ListItem from "../components/lists/ListItem";
 import ListItemSeparator from "../components/ListItemSeparator";
 import ListItemDeleteAction from "../components/ListItemDeleteAction";
 
 const initialMessages = [
   {
     id: 1,
-    title: "T1",
-    description: "lorem Ipsum wants to change $3000 to naira at 206.4 rate",
+    title: "Mosh Hamedani",
+    description:
+      "Lorem 3fdjkn dfn kdfnlkv fndk ldfnsjkvl nsfdjk fndjkn kjalnfjv ldfnjk ",
 
     image: require("../assets/mosh.jpg"),
   },
   {
     id: 2,
-    title: "T2",
-    description: "lorem Ipsum wants to change $3000 to naira at 206.4 rate",
+    title: "Mosh Hamedani",
+    description:
+      "ewjdn iefiewoj ier89oi45 re89hwea89 oiajip evdfnaio ehap a;ahe uidcha;a eduih ",
 
     image: require("../assets/mosh.jpg"),
   },
@@ -56,7 +58,7 @@ function MessagesScreen(props) {
               id: 2,
               title: "T2",
               description:
-                "lorem Ipsum wants to change $3000 to naira ant 206.4 rate",
+                "lorem Ipsum wants to exchange $3000 to naira ant 206.4 rate",
               image: require("../assets/mosh.jpg"),
             },
           ]);

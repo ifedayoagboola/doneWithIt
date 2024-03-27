@@ -1,16 +1,11 @@
 import React from "react";
-import {
-  View,
-  StyleSheet,
-  Image,
-  TouchableOpacity,
-  TouchableHighlight,
-} from "react-native";
-import AppText from "./AppText";
+import { View, StyleSheet, Image, TouchableHighlight } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Swipeable from "react-native-gesture-handler/Swipeable";
-
-import colors from "../config/colors";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+
+import Text from "../Text";
+import colors from "../../config/colors";
 
 function ListItem({
   title,
@@ -19,21 +14,29 @@ function ListItem({
   IconComponent,
   onPress,
   renderRightActions,
-  style,
 }) {
   return (
     <GestureHandlerRootView>
       <Swipeable renderRightActions={renderRightActions}>
         <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
-          <View style={[styles.container, style]}>
+          <View style={styles.container}>
             {IconComponent}
             {image && <Image style={styles.image} source={image} />}
             <View style={styles.detailsContainer}>
-              <AppText style={styles.title}>{title}</AppText>
+              <Text style={styles.title} numberOfLines={1}>
+                {title}
+              </Text>
               {subTitle && (
-                <AppText style={styles.subTitle}>{subTitle}</AppText>
+                <Text style={styles.subTitle} numberOfLines={2}>
+                  {subTitle}
+                </Text>
               )}
             </View>
+            <MaterialCommunityIcons
+              color={colors.medium}
+              name="chevron-right"
+              size={25}
+            />
           </View>
         </TouchableHighlight>
       </Swipeable>
@@ -43,18 +46,20 @@ function ListItem({
 
 const styles = StyleSheet.create({
   container: {
+    alignItems: "center",
     flexDirection: "row",
     padding: 15,
     backgroundColor: colors.white,
   },
   detailsContainer: {
+    flex: 1,
     marginLeft: 10,
     justifyContent: "center",
   },
   image: {
-    width: 60,
-    height: 60,
-    borderRadius: 30,
+    width: 70,
+    height: 70,
+    borderRadius: 35,
   },
   subTitle: {
     color: colors.medium,
