@@ -22,8 +22,9 @@ function ImageInput({ imageUri, onChangeImage }) {
   };
 
   const handlePress = () => {
-    if (!imageUri) selectImage();
-    else
+    if (!imageUri) {
+      return selectImage();
+    } else
       Alert.alert("Delete", "Are you sure you want to delete this image?", [
         { text: "Yes", onPress: () => onChangeImage(null) },
         { text: "No" },
@@ -36,7 +37,10 @@ function ImageInput({ imageUri, onChangeImage }) {
         mediaTypes: ImagePicker.MediaTypeOptions.Images,
         quality: 0.5,
       });
-      if (!result.canceled) onChangeImage(result.uri);
+      if (!result.canceled) {
+        // Check if result.uri exists
+        onChangeImage(result.assets[0].uri);
+      }
     } catch (error) {
       console.log("Error reading an image", error);
     }
