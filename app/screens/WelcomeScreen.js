@@ -15,10 +15,7 @@ function WelcomeScreen({ navigation }) {
         <Text style={styles.tagLine}>Sell What You Don't Need</Text>
       </View>
       <View style={styles.buttonsContainer}>
-        <Button
-          title="Login"
-          onPress={() => navigation.navigate("LoginScreen")}
-        />
+        <Button title="Login" onPress={() => navigation.navigate("Login")} />
         <Button
           title="register"
           onPress={() => navigation.navigate("Register")}
