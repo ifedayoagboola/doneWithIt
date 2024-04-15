@@ -92,7 +92,6 @@ function ListingEditScreen() {
       { ...listing, location },
       (progress) => setProgress(progress)
     );
-
     if (!result.ok) {
       setUploadVisible(false);
       return alert("Could not save the listing");
